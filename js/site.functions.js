@@ -91,13 +91,13 @@ function openCity(evt, cityName) {
           contentType: 'application/json; charset=utf-8',
           success: function (result) {
 
-            console.log(result)
+            alert(result)
             
               if (result == true) {
                   window.location.href = 'app.html';
               }
               else {
-                console.log("Não logou")
+                alert("Não logou")
 
                   //Mensagem("Autorização Gerente", "Credencial do gerente não encontrada!<br>Verifique e tente novamente!<br><br><br>");
               }
@@ -106,7 +106,7 @@ function openCity(evt, cityName) {
           error: function (xhr, status, error) {
               console.log(xhr)
               console.log(status)
-              console.log(error)
+              alert(error)
           }
       });
 
