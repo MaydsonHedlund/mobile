@@ -31,8 +31,8 @@
     "theme_color": "#49A5B0",
     "display": "standalone",
     "orientation": "any",
-    "start_url": "./login.html",
-    "url": "./login.html",
+    "start_url": "./configurador-terminal.html",
+    "url": "./configurador-terminal.html",
     "scope": ".",
     "lang": "PT-BR",
     "dir": "rtl"
