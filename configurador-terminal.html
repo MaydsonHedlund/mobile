@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <meta name="msapplication-TileColor" content="#ffff">
+    <meta name="theme-color" content="#49A5B0">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-16.png">
+    <link rel="apple-touch-icon" href="img/fav-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav-144.png">
+    <link rel="manifest" href="pwa-manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/adminlte.min.css" >
+    <link rel="stylesheet" href="icons/css/line-awesome.css">
+    <link rel="stylesheet" href="icons/css/line-awesome.min.css">
+    <link href="css/fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+</head>
+<body style="background-color: #49A5B0;" onload="GetDataBase()">
+
+  <section class="configurador-terminal vh-100 invisible">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <div class="login-logo">                
+                <span class="fs-20">Configurador<br><b>Smart</b>CommerceMobile</span>
+              </div>
+              <form id="loginForm" action="javascript:AddDataBase();" method="post">
+                <div class="form-group input-group mb-3">
+                  <input type="text" class="txt-pdv-hosting form-control" placeholder="pdv hosting"/>
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="las la-desktop fs-20"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-outline-secondary btn-block">Aplicar</button>
+                </div>
+                <div id="msgValidacaoLogin" asp-validation-summary="All" class="text-danger"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="content">
+    <div class="modal fade" id="modalMensagem" tabindex="-1" role="dialog" aria-labelledby="modalMensagem" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="txtTituloMensagem" class="modal-title text-center w-100"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <span id="txtTextoMensagem">
+                    Lorem Ipsum is simply
+                </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" style="min-width: 90px;" data-bs-dismiss="modal">OK</button>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="js/site.events.js"></script>
+  <script src="js/site.functions.js"></script>    
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/adminlte.min.js"></script>
+
+  
+</body>
+</html>
+
+

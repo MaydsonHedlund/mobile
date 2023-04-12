@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <meta name="msapplication-TileColor" content="#ffff">
+    <meta name="theme-color" content="#343A40">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-16.png">
+    <link rel="apple-touch-icon" href="img/fav-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav-144.png">
+    <link rel="manifest" href="pwa-manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/adminlte.min.css" >
+    <link rel="stylesheet" href="icons/css/line-awesome.css">
+    <link rel="stylesheet" href="icons/css/line-awesome.min.css">
+    <link href="css/fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+</head>
+<body>
+
+    <nav class="bg-dark">
+        <div class="bg-dark pl-4 pt-3">SmartCommerceMobile</div>
+    </nav>
+
+    <div id="Home" class="tabcontent">
+
+        <div class="content">
+            <div class="row col-12 p-0 m-0">
+                <div class="col-6">
+                    <!-- small box -->
+                    <a href="#" class="small-box bg-danger" onclick="NovaVenda()">
+                        <div class="inner text-center">
+                            <i class="las la-cart-plus fa-3x"></i>
+                        </div>
+                        <div href="#" class="small-box-footer">Nova venda</div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <!-- small box -->
+                    <a href="#" class="small-box bg-purple" onclick="AbrirModalConfiguracoes()">
+                        <div class="inner text-center">
+                            <i class="las la-tools fa-3x"></i>
+                        </div>
+                        <div href="#" class="small-box-footer">Caixa</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row col-12 p-0 m-0">
+                <div class="col-6">
+                    <!-- small box -->
+                    <a href="#" class="small-box bg-dark" onclick="AbrirModalConfiguracoes()">
+                        <div class="inner text-center">
+                            <i class="las la-cogs fa-3x"></i>
+                        </div>
+                        <div href="#" class="small-box-footer">Configurações</div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <!-- small box -->
+                    <a href="#" class="small-box bg-warning" onclick="AbrirModalConfiguracoes()">
+                        <div class="inner text-center text-white">
+                            <i class="las la-user-astronaut fa-3x"></i>
+                        </div>
+                        <div href="#" class="small-box-footer">Outros</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Identificacao" class="tabcontent">
+        <div class="content mt-3">
+            <h3 class="text-center mb-3">Identificação</h3>
+            <div class="row p-0 m-0 col-12">
+                <div class="col-12 m-0">
+                    <div class="card elevation-2">
+                        <div class="card-body clearfix p-0 m-0">
+                            <blockquote class="quote-secondary p-1 m-1">
+                                <small>Vendedor</small>
+                                <div class="form-group p-0 m-0 mt-3 mb-3">
+                                    <select class="form-control">
+                                        <option>Vendedor 1</option>
+                                        <option>Vendedor 2</option>
+                                        <option>Vendedor 3</option>
+                                        <option>Vendedor 4</option>
+                                        <option>Vendedor 5</option>
+                                    </select>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0 col-12">
+                <div class="col-12 m-0">
+                    <div class="card elevation-2">
+                        <div class="card-body p-0 m-0">
+                            <blockquote class="quote-blue p-1 m-1">
+                                <small>Cliente</small>
+                                <div class="row p-0 m-0 col-12 mt-3">
+                                    <div class="form-group p-0 m-0">
+                                        <input type="number" id="inputEstimatedBudget" class="form-control" placeholder="CPF/CNPJ">
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0 d-flex justify-content-between mt-3 mb-3">
+                                    <input type="button" id="inputEstimatedDuration1" class="btn btn-outline-secondary btn-sm col-3" value="Consultar" onclick="AbrirTelaSacola()"/>
+                                    <input type="button" id="inputEstimatedDuration2" class="btn btn-outline-secondary btn-sm col-3" value="Cadastrar" onclick="_SITE_.AbrirModalCadastroCliente()"/>
+                                    <input type="button" id="inputEstimatedDuration3" class="btn btn-outline-secondary btn-sm col-3" value="Pular" onclick="AbrirTelaSacola()"/>                            
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Venda" class="tabcontent">
+        <div class="content mt-3">
+            <h3 class="text-center mb-3">Compra</h3>
+            <div class="row p-0 m-0 col-12">
+                <div class="col-6 m-0">
+                    <div class="card elevation-2">
+                        <div class="card-body clearfix p-0 m-0">
+                            <blockquote class="quote-secondary p-1 m-1">
+                                <small>Total</small>
+                                <p>R$ 191,96</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 m-0">
+                    <div class="card elevation-2">
+                        <div class="card-body p-0 m-0">
+                            <blockquote class="quote-blue p-1 m-1">
+                                <small>Qtde de itens</small>
+                                <p>4</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0 col-12 mt-3">
+                <div class="form-group mb-4">
+                    <input type="number" id="inputEstimatedBudget" class="form-control " placeholder="Ler/Digitar Código de barras">
+                </div>
+                <div>
+                    <div class="form-group m-0 mb-2">
+                        <div class="callout callout-dark p-0 m-0 ">
+                            <div class="row p-0 m-0 col-12">
+                                <div class="col-1 d-flex align-items-center fs-10">
+                                    <div>1</div>
+                                </div>
+                                <div class="col-2 d-flex align-items-center p-0 m-0">
+                                    <a href="#" onclick="AbrirFoto()" ><img id="img" src="https://kallan.vteximg.com.br/arquivos/ids/323681-1140-1140/75010012_001_1-CHINELO-FEM-HAV-SLIM-NEON-GLOW-4147338.jpg?v=637933252824070000" style="height: 60px;"/></a>
+                                </div>
+                                <div class="col-8 p-0 m-0">
+                                    <div><span class="fs-10">CHINELO HAVAIANAS SLIM NEON GLOW</span></div>
+                                    <div><span class="fs-10">REF: 75010012_001</span></div>
+                                    <div><span class="text-danger fs-10" style="padding-right: 10px;">De R$ 59,99</span><span class="text-black">R$ 47,99</span></div>
+                                </div>
+                                <div class="col-1 d-flex align-items-center p-0 ">
+                                    <div><a href="#"><i class="lar la-times-circle fs-25 trash-sacola" ></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group m-0 mb-2">
+                        <div class="callout callout-dark p-0 m-0">
+                            <div class="row p-0 m-0 col-12">
+                                <div class="col-1 d-flex align-items-center fs-10">
+                                    <div>2</div>
+                                </div>
+                                <div class="col-2 d-flex align-items-center p-0 m-0">
+                                    <a href="#" onclick="AbrirFoto()" ><img id="img" src="https://kallan.vteximg.com.br/arquivos/ids/380014-1140-1140/36020116_004_1-MAS-SAPT-CASUAL-PEGADA-119904.jpg?v=638119206178230000" style="height: 60px;"/></a>
+                                </div>
+                                <div class="col-8 p-0 m-0">
+                                    <div><span class="fs-10">SAPATÊNIS PEGADA COURO CASUAL MARROM</span></div>
+                                    <div><span class="fs-10">REF: 36020116_004</span></div>
+                                    <div><span class="text-danger fs-10" style="padding-right: 10px;">De R$ 59,99</span><span class="text-black">R$ 47,99</span></div>
+                                </div>
+                                <div class="col-1 d-flex align-items-center p-0 m-0">
+                                    <div><a href="#"><i class="lar la-times-circle fs-25 trash-sacola" ></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group m-0 mb-2">
+                        <div class="callout callout-dark p-0 m-0">
+                            <div class="row p-0 m-0 col-12">
+                                <div class="col-1 d-flex align-items-center fs-10">
+                                    <div>3</div>
+                                </div>
+                                <div class="col-2 d-flex align-items-center p-0 m-0">
+                                    <a href="#" onclick="AbrirFoto()" ><img id="img" src="https://kallan.vteximg.com.br/arquivos/ids/396341-1140-1140/01012159_001_1-FEMININO-ACE-BOLSA-CHENSON-3483197.jpg?v=638163990051270000" style="height: 60px;"/></a>
+                                </div>
+                                <div class="col-8 p-0 m-0">
+                                    <div><span class="fs-10">BOLSA CHENSON DUAS ALÇAS MARROM</span></div>
+                                    <div><span class="fs-10">REF: 01012159_001</span></div>
+                                    <div><span class="text-danger fs-10" style="padding-right: 10px;">De R$ 59,99</span><span class="text-black">R$ 47,99</span></div>
+                                </div>
+                                <div class="col-1 d-flex align-items-center p-0 m-0">
+                                    <div><a href="#"><i class="lar la-times-circle fs-25 trash-sacola" ></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group m-0 mb-2">
+                        <div class="callout callout-dark p-0 m-0">
+                            <div class="row p-0 m-0 col-12">
+                                <div class="col-1 d-flex align-items-center fs-10">
+                                    <div>4</div>
+                                </div>
+                                <div class="col-2 d-flex align-items-center p-0 m-0">
+                                    <a href="#" onclick="AbrirFoto()" ><img id="img" src="https://kallan.vteximg.com.br/arquivos/ids/378371-1140-1140/51010231_001_1-ACE-ESP-MOCHILA-MF3452-CLIO.jpg?v=638108496264130000" style="height: 60px;"/></a>
+                                </div>
+                                <div class="col-8 p-0 m-0">
+                                    <div><span class="fs-10">MOCHILA CLIO ESPORTIVA SORTIDA</span></div>
+                                    <div><span class="fs-10">REF: 51010231_001</span></div>
+                                    <div><span class="text-danger fs-10" style="padding-right: 10px;">De R$ 59,99</span><span class="text-black">R$ 47,99</span></div>
+                                </div>
+                                <div class="col-1 d-flex align-items-center p-0 m-0">
+                                    <div><a href="#"><i class="lar la-times-circle fs-25 trash-sacola" ></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Pagamento" class="tabcontent">
+        <div class="content mt-3">
+            <h3 class="text-center mb-3">Pagamento</h3>
+            <div class="row p-0 m-0 col-12">
+                <div class="col-6 m-0">
+                    <div class="card elevation-2">
+                        <div class="card-body clearfix p-0 m-0">
+                            <blockquote class="quote-secondary p-1 m-1">
+                                <small>Total</small>
+                                <p>R$ 191,96</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 m-0">
+                    <div class="card elevation-2">
+                        <div class="card-body p-0 m-0">
+                            <blockquote class="quote-blue p-1 m-1">
+                                <small>Saldo</small>
+                                <p>R$ 0,00</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-0 m-0 col-12 mt-3">
+                <div class="col-6 m-0">
+                    <div class="card elevation-2" style="min-height: 90px;">
+                        <div class="card-body row col-12" onclick="_SITE_.AbrirModalSite('Pagamento Crédito')">
+                            <div class="col-6">
+                                <span>Crédito</span>
+                            </div>
+                            <div class="col-6">
+                                <i class="text-center fs-35 lar la-credit-card menu-util"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 m-0">
+                    <div class="card elevation-2" style="min-height: 90px;">
+                        <div class="card-body row col-12" onclick="_SITE_.AbrirModalSite('Pagamento Débito')">
+                            <div class="col-6">
+                                <span>Débito</span>
+                            </div>
+                            <div class="col-6">
+                                <i class="text-center fs-35 lar la-credit-card menu-util"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 m-0">
+                    <div class="card elevation-2" style="min-height: 90px;">
+                        <div class="card-body row col-12" onclick="_SITE_.AbrirModalSite('Pagamento Kallan Card')">
+                            <div class="col-6">
+                                <span>Kallan Card</span>
+                            </div>
+                            <div class="col-6">
+                                <i class="text-center fs-35 lar la-credit-card menu-util"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 m-0">
+                    <div class="card elevation-2" style="min-height: 90px;">
+                        <div class="card-body row col-12" onclick="_SITE_.AbrirModalSite('Pagamento Pix')">
+                            <div class="col-6">
+                                <span>Pix</span>
+                            </div>
+                            <div class="col-6">
+                                <i class="text-center fs-35 las la-qrcode menu-util"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-center mb-3 mt-5 mb-3">Efetuado</h3>
+                <div class="form-group m-0 mb-2">
+                    <div class="callout callout-dark p-0 m-0">
+                        <div class="row p-0 m-0 col-12">
+                            <div class="col-1 d-flex align-items-center">
+                                <div>1</div>
+                            </div>
+                            <div class="col-5 d-flex align-items-center p-0 m-0">
+                                <div>Pix</div>
+                            </div>
+                            <div class="col-5 p-0 m-0">
+                                <div>R$ 50,00</div>
+                            </div>
+                            <div class="col-1 d-flex align-items-center p-0 m-0">
+                                <div>
+                                    <a href="#">
+                                        <i class="lar la-times-circle fs-25 trash-sacola" ></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group m-0 mb-2">
+                    <div class="callout callout-dark p-0 m-0">
+                        <div class="row p-0 m-0 col-12">
+                            <div class="col-1 d-flex align-items-center">
+                                <div>2</div>
+                            </div>
+                            <div class="col-5 d-flex align-items-center p-0 m-0">
+                                <div>Cartão Crédito</div>
+                            </div>
+                            <div class="col-5 p-0 m-0">
+                                <div>R$ 100,00</div>
+                            </div>
+                            <div class="col-1 d-flex align-items-center p-0 m-0">
+                                <div>
+                                    <a href="#">
+                                        <i class="lar la-times-circle fs-25 trash-sacola" ></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group m-0 mb-2">
+                    <div class="callout callout-dark p-0 m-0">
+                        <div class="row p-0 m-0 col-12">
+                            <div class="col-1 d-flex align-items-center">
+                                <div>3</div>
+                            </div>
+                            <div class="col-5 d-flex align-items-center p-0 m-0">
+                                <div>Cartão Débito</div>
+                            </div>
+                            <div class="col-5 p-0 m-0">
+                                <div>R$ 41,96</div>
+                            </div>
+                            <div class="col-1 d-flex align-items-center p-0 m-0">
+                                <div>
+                                    <a href="#">
+                                        <i class="lar la-times-circle fs-25 trash-sacola" ></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Configuracao" class="tabcontent">
+        <div class="content mt-3">
+            <h3 class="text-center mb-3">Como deseja receber seu cupom?</h3>
+            <div class="row p-0 m-0 col-12 mt-3">
+                <div class="col-6 m-0" >
+                    <div class="card elevation-2">
+                        <div class="card-body p-0 m-0" onclick="AbrirTelaInicial()">
+                            <blockquote class="quote-secondary p-1 m-1 ">
+                                <div class="col-12 text-center">
+                                    <span>Impresso</span>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <i class="fs-35 las la-print menu-util"></i>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 m-0" >
+                    <div class="card elevation-2">
+                        <div class="card-body p-0 m-0" onclick="AbrirTelaInicial()">
+                            <blockquote class="quote-blue p-1 m-1">
+                                <div class="col-12 text-center">
+                                    <span>E-mail</span>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <i class="fs-35 las la-envelope-open-text menu-util"></i>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Perfil" class="tabcontent">
+        <div class="content">
+            <p>Tela Perfil</p>
+        </div>
+    </div>
+
+    <div class="menu-top fixed-bottom bg-dark">
+        <div class="row p-0 m-0">
+            <a hidden href="#" class="col-home menu-footer col p-0 m-0 mt-2 text-center menu-activate" onclick="openCity(event, 'Home')"><i class="text-center fs-25 las la-home"></i></a>
+            <a href="#" class="col-identity sale menu-footer col p-0 m-0 mt-2 text-center menu-deactivate" onclick="openCity(event, 'Identificacao')"><i class="text-center fs-25 las la-user-check"></i></a>
+            <a href="#" class="col-cart sale menu-footer col p-0 m-0 mt-2 text-center menu-deactivate" onclick="openCity(event, 'Venda')"><i class="text-center fs-25 las la-shopping-cart"></i></a>
+            <a href="#" class="col-payment sale menu-footer col p-0 m-0 mt-2 text-center menu-deactivate" onclick="openCity(event, 'Pagamento')"><i class="text-center fs-25 lar la-credit-card"></i></a>
+            <a href="#" class="col-fiscal sale menu-footer col p-0 m-0 mt-2 text-center menu-deactivate" onclick="openCity(event, 'Configuracao')"><i class="text-center fs-25 las la-receipt"></i></a>
+            <a href="#" class="col-cancel sale menu-footer col p-0 m-0 mt-2 text-center menu-deactivate" onclick="openCity(event, 'Home')"><i class="text-center fs-25 lar la-times-circle"></i></a>            
+        </div>
+        <div class="row p-0 m-0">
+            <a hidden href="#" class="col-home-heading col menu-footer heading text-center fs-10" style="text-decoration: none;" onclick="openCity(event, 'Home')"><span class="col-home menu-footer menu-activate">Início</span></a>
+            <a href="#" class="col-identity-heading sale col menu-footer text-center fs-10" style="text-decoration: none;" onclick="openCity(event, 'Identificacao')"><span class="col-identity menu-footer menu-deactivate">Identificação</span></a>
+            <a href="#" class="col-cart-heading sale col menu-footer text-center fs-10 text-white" style="text-decoration: none;" onclick="openCity(event, 'Venda')"><span class="col-cart menu-footer menu-deactivate">Compra</span></a>
+            <a href="#" class="col-payment-heading sale col menu-footer text-center fs-10 text-white" style="text-decoration: none;" onclick="openCity(event, 'Pagamento')"><span class="col-payment menu-footer menu-deactivate">Pagamento</span></a>
+            <a href="#" class="col-fiscal-heading sale col menu-footer text-center fs-10 text-white" style="text-decoration: none;" onclick="openCity(event, 'Configuracao')"><span class="col-fiscal menu-footer menu-deactivate">Finalizar</span></a>
+            <a href="#" class="col-cancel-heading sale col menu-footer text-center fs-10 text-white " style="text-decoration: none;" onclick="openCity(event, 'Home')"><span class="col-fiscal menu-footer menu-deactivate">Cancelar</span></a>            
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="modal fade" id="modalMensagem" tabindex="-1" role="dialog" aria-labelledby="modalMensagem" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100">Mensagem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span id="txtTextoMensagem">
+                        Lorem Ipsum is simply
+                    </span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalCadastroCliente" tabindex="-1" role="dialog" aria-labelledby="modalCadastroCliente" aria-hidden="true" data-backdrop="static">  
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100">Cadastro cliente</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <small>Nome</small>
+                            <input type="text" id="inputEstimatedBudget" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <small>E-mail</small>
+                            <input type="text" id="inputSpentBudget" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <small>Celular</small>
+                            <input type="number" id="inputEstimatedDuration" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <small>CPF/CNPJ</small>
+                            <input type="number" id="inputEstimatedDuration" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary btn-sm" style="min-width: 90px !important;" onclick="_SITE_.CancelarCadastrarCliente()">Fechar</button>                    
+                    <button type="button" class="btn btn-outline-secondary btn-sm" style="min-width: 90px !important;" onclick="_SITE_.CadastrarCliente()">Cadastrar</button>                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/site.events.js"></script>
+    <script src="js/site.functions.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script>
+    
+        openCity(event, 'Home');
+
+        const platform = navigator.platform.toLowerCase();
+
+        if (platform.includes('win')) {
+        
+            //alert("O PWA não está sendo executado em um dispositivo móvel\n\rPlataforma: " + platform);
+        }
+        else{
+            //alert("O PWA está sendo executado em um dispositivo móvel\n\rPlataforma: " + platform);
+        }
+    
+    </script>
+
+</body>
+</html>

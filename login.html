@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <meta name="msapplication-TileColor" content="#ffff">
+    <meta name="theme-color" content="#49A5B0">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav-16.png">
+    <link rel="apple-touch-icon" href="img/fav-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav-144.png">
+    <link rel="manifest" href="pwa-manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/adminlte.min.css" >
+    <link rel="stylesheet" href="icons/css/line-awesome.css">
+    <link rel="stylesheet" href="icons/css/line-awesome.min.css">
+    <link href="css/fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="css/fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <script type='text/javascript' src="js/main.js"></script>
+    <script type='text/javascript' src="js/jquery.min.js"></script>
+</head>
+<body style="background-color: #49A5B0;" onload="GetDataBase()">
+  <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <div class="login-logo">
+              <b>Smart</b>Commerce<br>
+                <span class="fs-25">Mobile</span>
+              </div>
+              <form id="loginForm" action="javascript:EfetuarLogin();" method="post">
+                <div class="form-group input-group mb-3">
+                  <input class="txt-user form-control" placeholder="usuário/e-mail" data-campo-selecionado="usuário/e-mail"/>
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-user"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group input-group mb-3">
+                  <input type="password" class="txt-password form-control" placeholder="senha" data-campo-selecionado="senha"/>
+                  <div class="input-group-append">
+                    <div class="input-group-text">
+                      <span class="fas fa-lock"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <p/>
+                  <p class="login-box-msg">
+                    
+                  </p>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-outline-secondary btn-block">Entrar</button>
+                </div>
+                <div id="msgValidacaoLogin" asp-validation-summary="All" class="text-danger"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/site.events.js"></script>
+  <script src="js/site.functions.js"></script>    
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/adminlte.min.js"></script>
+  <script src="js/adminlte.min.js"></script>
+</body>
+</html>
+
+

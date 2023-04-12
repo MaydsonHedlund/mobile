@@ -1,0 +1,179 @@
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.content {    
+    margin: 20px 10px 0px 10px;
+}
+
+.reload-btn {
+    text-align: center;
+    background: #eee;
+    padding: 10px;
+    color: rgb(61, 61, 61);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 230px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.fs-10{
+    font-size: 10px !important;
+}
+
+.fs-12{
+    font-size: 12px !important;
+}
+
+.fs-15{
+    font-size: 15px !important;
+}
+
+.fs-20{
+    font-size: 20px !important;
+}
+
+.fs-25{
+    font-size: 25px !important;
+}
+
+.fs-30{
+    font-size: 30px !important;
+}
+
+.fs-35{
+    font-size: 35px !important;
+}
+
+
+.fs-40{
+    font-size: 40px !important;
+}
+
+.fs-45{
+    font-size: 45px !important;
+}
+
+.fs-50{
+    font-size: 50px !important;
+}
+
+.fs-55{
+    font-size: 55px !important;
+}
+
+.bg-menu-footer{
+    background-color: #fff;
+}
+
+.menu-deactivate{
+    color: #B0BEC5;
+}
+
+.menu-activate{
+    color: #fff;
+    
+}
+
+.heading {
+    border-bottom:1.6px solid #fff;
+    width:50%;
+ }
+
+ i:hover {
+    color: #fff;
+  }
+
+  .row a:hover {
+    color:#fff;
+  }
+
+
+  /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.trash-sacola{
+    color: #DC3545;
+  }
+
+  .trash-sacola:hover{
+    color: #DC3545;
+  }
+
+
+  .menu-util:hover{
+    color: #1F1F27;
+  }
+
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #000;
+  border-bottom: 2px solid red;
+  width:100%;
+
+}
+
+.callout-dark{
+    /*border-left-color: #343A40 !important;*/
+    border-left-color: gray
+}
+
+.quote-blue{
+    border-left: solid 12px #49A5B0 !important;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  /*
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  */
+  border-top: none;
+}
+
+.navbar-header{
+    padding-left: 10px !important;
+    background-color:#49A5B0;
+    
+}
+
+.menu-top{
+    background-color: #49A5B0;
+    text-decoration: none;
+    padding-top: 0px;
+}
+
+.no-decoration{
+    text-decoration: none !important;
+}
+
+btn-w-min{
+    min-width: 90px !important;
+}
